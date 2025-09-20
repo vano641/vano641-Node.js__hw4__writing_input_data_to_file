@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "db82ba00-ba6b-471d-b21c-db46f7f48938",
+		"name": "Node.js_hw4_express_rest_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"id": "dff2f37a-dd6f-44e6-945e-af19cb22dbf1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Kris\",\r\n    \"secondName\": \"Mysovsky\",\r\n    \"age\": 36,\r\n    \"city\": \"Saint-Peterburg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get users list",
+			"id": "f9c2ce2c-e241-47fe-9833-07745f523465",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"users\": [ \r\n        {\r\n            \"name\": \"John\", \r\n            \"age\": 30\r\n        }, \r\n        {\r\n            \"name\": \"Jane\", \r\n            \"age\": 25\r\n        }, \r\n        {\r\n            \"name\": \"Mike\", \r\n            \"age\": 35\r\n        } \r\n    ]\r\n}"
+				},
+				"url": "http://localhost:3000/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by Id",
+			"id": "c4026abe-607b-45c7-a460-f11ed70adcc7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/users/4"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by id",
+			"id": "798b05ea-f81b-42cf-8e54-3bbc04c1fa62",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"id": "305dcc1b-bc27-47ff-96c2-b50708acc5d8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Alex\",\r\n    \"secondName\": \"Mysovsky\",\r\n    \"age\": 25,\r\n    \"city\": \"Moscow\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/3"
+			},
+			"response": []
+		}
+	]
+}
